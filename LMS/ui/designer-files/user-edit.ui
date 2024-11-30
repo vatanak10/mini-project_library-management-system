@@ -23,7 +23,8 @@
    <iconset>
     <normaloff>../../assets/logo.svg</normaloff>../../assets/logo.svg</iconset>
   </property>
-  <widget class="QLabel" name="label">
+
+  <!-- <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -54,11 +55,12 @@
    <property name="maxLength">
     <number>16</number>
    </property>
-  </widget>
+  </widget> -->
+
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>190</x>
+     <x>10</x>
      <y>10</y>
      <width>91</width>
      <height>21</height>
@@ -74,9 +76,9 @@
   <widget class="QLineEdit" name="lineEditFirstName">
    <property name="geometry">
     <rect>
-     <x>290</x>
+     <x>110</x>
      <y>10</y>
-     <width>261</width>
+     <width>440</width>
      <height>21</height>
     </rect>
    </property>
@@ -87,10 +89,11 @@
     <number>32</number>
    </property>
   </widget>
+
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>190</x>
+     <x>10</x>
      <y>40</y>
      <width>91</width>
      <height>21</height>
@@ -106,9 +109,9 @@
   <widget class="QLineEdit" name="lineEditLastName">
    <property name="geometry">
     <rect>
-     <x>290</x>
+     <x>110</x>
      <y>40</y>
-     <width>261</width>
+     <width>440</width>
      <height>21</height>
     </rect>
    </property>
@@ -119,10 +122,11 @@
     <number>32</number>
    </property>
   </widget>
+
   <widget class="QLabel" name="label_4">
    <property name="geometry">
     <rect>
-     <x>190</x>
+     <x>10</x>
      <y>70</y>
      <width>91</width>
      <height>21</height>
@@ -138,9 +142,9 @@
   <widget class="QLineEdit" name="lineEditEmail">
    <property name="geometry">
     <rect>
-     <x>290</x>
+     <x>110</x>
      <y>70</y>
-     <width>261</width>
+     <width>440</width>
      <height>21</height>
     </rect>
    </property>
@@ -154,9 +158,9 @@
   <widget class="QLineEdit" name="lineEditPhone">
    <property name="geometry">
     <rect>
-     <x>290</x>
+     <x>110</x>
      <y>100</y>
-     <width>261</width>
+     <width>440</width>
      <height>21</height>
     </rect>
    </property>
@@ -167,10 +171,11 @@
     <number>16</number>
    </property>
   </widget>
+  
   <widget class="QLabel" name="label_5">
    <property name="geometry">
     <rect>
-     <x>190</x>
+     <x>10</x>
      <y>100</y>
      <width>91</width>
      <height>21</height>
@@ -188,7 +193,7 @@
     <rect>
      <x>110</x>
      <y>130</y>
-     <width>441</width>
+     <width>440</width>
      <height>21</height>
     </rect>
    </property>
@@ -199,6 +204,7 @@
     <number>128</number>
    </property>
   </widget>
+
   <widget class="QLabel" name="label_6">
    <property name="geometry">
     <rect>
@@ -215,6 +221,7 @@
     <string>Address : </string>
    </property>
   </widget>
+
   <widget class="QPushButton" name="pushButtonSave">
    <property name="geometry">
     <rect>
@@ -230,7 +237,7 @@
   </widget>
  </widget>
  <tabstops>
-  <tabstop>lineEditPrefixName</tabstop>
+  <!-- <tabstop>lineEditPrefixName</tabstop> -->
   <tabstop>lineEditFirstName</tabstop>
   <tabstop>lineEditLastName</tabstop>
   <tabstop>lineEditEmail</tabstop>

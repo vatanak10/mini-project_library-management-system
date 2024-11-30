@@ -8,7 +8,7 @@ from ..config import CONFIG
 from ..lms_types import UserData
 
 class UserEdit_UI(QWidget):
-    lineEditPrefixName: QLineEdit
+    # lineEditPrefixName: QLineEdit
     lineEditFirstName: QLineEdit
     lineEditLastName: QLineEdit
     lineEditEmail: QLineEdit
@@ -35,11 +35,11 @@ class UserEdit_UI(QWidget):
         self.old_data = copy(old_data)
 
         if old_data is None:
-            self.LoadEditData(UserData(None, "", "", "", "", "", ""))
+            self.LoadEditData(UserData(None, "", "", "", "", ""))
         else:
             self.LoadEditData(old_data)
 
-        self.lineEditPrefixName.returnPressed.connect(lambda: self.lineEditFirstName.setFocus())
+        # self.lineEditPrefixName.returnPressed.connect(lambda: self.lineEditFirstName.setFocus())
         self.lineEditFirstName.returnPressed.connect(lambda: self.lineEditLastName.setFocus())
         self.lineEditLastName.returnPressed.connect(lambda: self.lineEditEmail.setFocus())
         self.lineEditEmail.returnPressed.connect(lambda: self.lineEditPhone.setFocus())
@@ -68,7 +68,7 @@ class UserEdit_UI(QWidget):
                 QMessageBox.critical(self, "Runtime Error", "No callback function !")
 
     def LoadEditData(self, instance: UserData) -> None:
-        self.lineEditPrefixName.setText(instance.prefixName if instance.prefixName else "")
+        # self.lineEditPrefixName.setText(instance.prefixName if instance.prefixName else "")
         self.lineEditFirstName.setText(instance.firstName if instance.firstName else "")
         self.lineEditLastName.setText(instance.lastName if instance.lastName else "")
         self.lineEditEmail.setText(instance.email if instance.email else "")
@@ -76,7 +76,7 @@ class UserEdit_UI(QWidget):
         self.lineEditAddress.setText(instance.address if instance.address else "")
 
     def DumpEditData(self) -> UserData:
-        prefixName = self.lineEditPrefixName.text().strip()
+        # prefixName = self.lineEditPrefixName.text().strip()
         firstName = self.lineEditFirstName.text().strip()
         lastName = self.lineEditLastName.text().strip()
         email = self.lineEditEmail.text().strip()
@@ -85,7 +85,7 @@ class UserEdit_UI(QWidget):
 
         return UserData(
             userId=(self.old_data.userId if self.old_data else None),
-            prefixName=(prefixName if prefixName != "" else None),
+            # prefixName=(prefixName if prefixName != "" else None),
             firstName=(firstName),
             lastName=(lastName),
             email=(email if email != "" else None),
