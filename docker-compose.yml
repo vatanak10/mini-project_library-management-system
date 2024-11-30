@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+    mysql:
+        image: mysql:8.0
+        container_name: mysql_db
+        restart: unless-stopped
+        environment:
+            MYSQL_ROOT_PASSWORD: rootpass
+            MYSQL_DATABASE: LMS_DB
+            MYSQL_USER: lms-admin
+            MYSQL_PASSWORD: pass
+        ports:
+            - "3307:3306"
+        volumes:
+            - mysql_data:/var/lib/mysql
+            - ./db/create_db.sql:/docker-entrypoint-initdb.d/create_db.sql
+
+volumes:
+    mysql_data:

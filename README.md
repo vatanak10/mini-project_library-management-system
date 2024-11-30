@@ -8,18 +8,18 @@
 
 This repository is a Mini Python project that I studied in university. which has been assigned to The program requires CRUD (Create, Read, Update, and Delete) and GUI (Graphical User Interface).
 
-- Programming Language : Python
-- CRUD : MySQL
-- GUI : PyQt6
+-   Programming Language : Python
+-   CRUD : MySQL
+-   GUI : PyQt6
 
 ## About development
 
-- OS : Windows
-- Python : 3.11.6
-  - PyQt6 : 6.4.3
-  - pyqt6-tools : 6.4.2.3.3
-  - mysql-connector-python : 8.3.0
-  - PyYAML : 6.0.1
+-   OS : Windows
+-   Python : 3.11.6
+    -   PyQt6 : 6.4.3
+    -   pyqt6-tools : 6.4.2.3.3
+    -   mysql-connector-python : 8.3.0
+    -   PyYAML : 6.0.1
 
 ## Config file
 
@@ -61,5 +61,5 @@ python -m LMS --config config.yaml
 ### Run without config file
 
 ```sh
-python -m LMS --host 127.0.0.1 --port 3306 --db LMS_DB --user lms-admin --passwd pass
+python -m LMS --host 127.0.0.1 --port 3307 --db LMS_DB --user lms-admin --passwd pass
 ```
