@@ -865,6 +865,7 @@ class MainWindow_UI(QMainWindow):
                 self.userList.append(user)
                 self.tableWidgetUMGMT.setItem(row, 0, self.toTableWidgetItem(user.userId, center=True))
                 # self.tableWidgetUMGMT.setItem(row, 1, self.toTableWidgetItem((user.prefixName + "." if user.prefixName else "") + user.firstName))
+                self.tableWidgetUMGMT.setItem(row, 1, self.toTableWidgetItem(user.firstName))
                 self.tableWidgetUMGMT.setItem(row, 2, self.toTableWidgetItem(user.lastName))
                 self.tableWidgetUMGMT.setItem(row, 3, self.toTableWidgetItem(user.email if user.email else ""))
                 self.tableWidgetUMGMT.setItem(row, 4, self.toTableWidgetItem(user.phone if user.phone else ""))
