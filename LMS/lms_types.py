@@ -7,7 +7,7 @@ T = TypeVar('T')
 @dataclass
 class UserData:
     userId: Optional[int]
-    # prefixName: Optional[str]
+    prefixName: Optional[str]
     firstName: str
     lastName: str
     email: Optional[str]

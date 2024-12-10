@@ -164,9 +164,7 @@ class DBSession:
         try:
             self.cursor.execute(
                 "INSERT INTO User (prefixName, firstName, lastName, email, phone, address) VALUES (%s, %s, %s, %s, %s, %s)",
-                (
-                    # data.prefixName, 
-                 data.firstName, data.lastName, data.email, data.phone, data.address)
+                (data.prefixName, data.firstName, data.lastName, data.email, data.phone, data.address)
             )
             self.connection.commit()
         except MysqlError as err:
@@ -210,7 +208,7 @@ class DBSession:
     def _RowTypeToUserData(self, row: RowType) -> UserData:
         return UserData(
             userId=(row[0] if type(row[0]) is int else None),
-            # prefixName=(row[1] if type(row[1]) is str else None),
+            prefixName=(row[1] if type(row[1]) is str else None),
             firstName=(row[2] if type(row[2]) is str else ""),
             lastName=(row[3] if type(row[3]) is str else ""),
             email=(row[4] if type(row[4]) is str else None),
@@ -243,16 +241,14 @@ class DBSession:
             colvals: list[tuple[str, Union[str, None]]] = []
 
             if old_data is not None:
-                # if data.prefixName != old_data.prefixName: colvals.append(("prefixName", data.prefixName))
+                if data.prefixName != old_data.prefixName: colvals.append(("prefixName", data.prefixName))
                 if data.firstName != old_data.firstName: colvals.append(("firstName", data.firstName))
                 if data.lastName != old_data.lastName: colvals.append(("lastName", data.lastName))
                 if data.email != old_data.email: colvals.append(("email", data.email))
                 if data.phone != old_data.phone: colvals.append(("phone", data.phone))
                 if data.address != old_data.address: colvals.append(("address", data.address))
             else:
-                colvals = [
-                    # ("prefixName", data.prefixName), 
-                    ("firstName", data.firstName), ("lastName", data.lastName), ("email", data.email), ("phone", data.phone), ("address", data.address)]
+                colvals = [("prefixName", data.prefixName), ("firstName", data.firstName), ("lastName", data.lastName), ("email", data.email), ("phone", data.phone), ("address", data.address)]
 
             if len(colvals) > 0:
                 self.cursor.execute("UPDATE User SET " + (", ".join([f"{i[0]}=%s" for i in colvals])) + " WHERE userId = %s", tuple([i[1] for i in colvals] + [data.userId]))
