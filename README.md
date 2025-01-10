@@ -46,6 +46,9 @@ mysql < .\\db\\create_user.sql
 
 ### LMS
 
+Please note that you need to install python3.9 or below
+or you won't be able to install PyQt6.
+
 ```sh
 python -m venv venv
 .\\venv\\Scripts\\activate

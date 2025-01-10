@@ -13,7 +13,7 @@ from .config import CONFIG
 from .lms_types import UserData, BookData, BookBorrowHistoryData, BookBorrowReviewData, BookReturnReviewData, ExecuteResult
 
 class DBSession:
-    connection: PooledMySQLConnection | MySQLConnectionAbstract
+    connection: Union[PooledMySQLConnection, MySQLConnectionAbstract]
 
     cursor: MySQLCursorAbstract
 
